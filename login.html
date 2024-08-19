@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get the username and password values
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simple validation (replace with real authentication logic)
+            if (username === 'theja' && password === 'password') {
+                // Redirect to the shopping page
+                window.location.href = 'shopping.html';
+            } else {
+                alert('Invalid username or password');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <form class="login-form" onsubmit="handleLogin(event)">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
